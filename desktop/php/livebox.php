@@ -47,13 +47,15 @@ $eqLogics = eqLogic::byType('livebox');
   <a class="btn btn-danger eqLogicAction pull-right" data-action="remove"><i class="fas fa-minus-circle"></i> {{Supprimer}}</a>
   <a class="btn btn-default eqLogicAction pull-right" data-action="configure"><i class="fas fa-cogs"></i> {{Configuration avancée}}</a>
   <ul class="nav nav-tabs" role="tablist">
-   <li role="presentation"><a class="eqLogicAction cursor" aria-controls="home" role="tab" data-action="returnToThumbnailDisplay"><i class="fas fa-arrow-circle-left"></i></a></li>
-   <li role="presentation" class="active"><a href="#eqlogictabin" aria-controls="home" role="tab" data-toggle="tab"><i class="fas fa-tachometer-alt"></i> {{LiveBox}}</a></li>
+   <li role="presentation"><a href="" class="eqLogicAction" aria-controls="home" role="tab" data-toggle="tab" data-action="returnToThumbnailDisplay"><i class="fas fa-arrow-circle-left"></i></a></li>
+   <li role="presentation" class="active"><a href="#eqlogictabin" aria-controls="home" role="tab" data-toggle="tab"><i class="fas fa-tachometer-alt"></i> {{Equipement}}</a></li>
    <li role="presentation"><a href="#cmdtab" aria-controls="profile" role="tab" data-toggle="tab"><i class="fas fa-list-alt"></i> {{Commandes}}</a></li>
  </ul>
  <div class="tab-content" style="height:calc(100% - 50px);overflow:auto;overflow-x: hidden;">
   <div role="tabpanel" class="tab-pane active" id="eqlogictabin">
-
+	<br/>
+		<div class="row">
+		<div class="col-sm-6">
         <form class="form-horizontal">
             <fieldset>
                 <legend>
@@ -120,18 +122,32 @@ $eqLogics = eqLogic::byType('livebox');
                 </div>
             </fieldset> 
         </form>
+        </div>
+        <div class="col-sm-6">
+            <form class="form-horizontal">
+                <fieldset>
+                    <table id="table_infoseqlogic" class="table table-condensed" style="border-radius: 10px;">
+                        <thead>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+				</fieldset>
+			</form>
+		</div>
+  </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="cmdtab">
 <br />
         <table id="table_cmd" class="table table-bordered table-condensed">
             <thead>
                 <tr>
-                    <th style="width: 50px;">#</th>
-                    <th>{{Nom}}</th>
+                    <th style="width: 100px;">#</th>
+                    <th style="width: 300px;">{{Nom}}</th>
 					<th style="width: 120px;">{{Icône-action}}</th>
                     <th style="width: 120px;">{{Sous-Type}}</th>
-                    <th style="width: 120px;">{{Paramètres}}</th>
-                    <th style="width: 100px;">{{Action}}</th>
+                    <th style="width: 120px;">{{Options}}</th>
+                    <th style="width: 100px;">{{Actions}}</th>
                 </tr>
             </thead>
             <tbody>
